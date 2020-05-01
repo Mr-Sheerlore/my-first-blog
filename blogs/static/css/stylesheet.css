@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN";
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+.top-wrapper {
+    background-color: #008b8b;
+    width: 100%;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 0px;
+}
+
+.top-wrapper h1 {
+    font-size: 35px;
+    line-height: 75px;
+}
+
+.main-wrapper h1 {
+    color: black;
+    width: 100%;
+    font-size: 30px;
+    margin: 10px 0;
+    line-height: 30px;
+}
+
+.main-wrapper h3 {
+    color: black;
+    font-size: 15px;
+    margin: 10px 0;
+    line-height: 30px;
+}
+
+.main-wrapper {
+    float: left;
+    width: 100%;
+    height: 1000px;
+    background-color: rgb(240, 240, 240);
+}
+
+.text {
+    margin: 20px 200px;
+    padding: 15px 50px;
+    text-align: left;
+    background-color: rgba(223, 218, 218, 0.9);
+    box-shadow: 5px 5px 5px rgba(136, 135, 135, 0.5);
+    position: relative;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(184, 184, 184);
+    color: rgb(70, 69, 69);
+}
+
+.btn {
+    background-color: rgba(136, 135, 135, 0.295);
+    padding: 10px 7px 10px 7px;
+    display: block;
+    position: absolute;
+    right: 55px;
+    bottom: 20px;
+    color: rgb(90, 88, 88);
+    border-radius: 6px;
+    transition: color 1s, background 1s;
+}
