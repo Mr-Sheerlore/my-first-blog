@@ -5,6 +5,137 @@
 <head>
     <meta charset="utf-8">
     <title>ブログ管理サイト</title>
+    <link rel="stylesheet" type="text/css" href="static/css/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <h1>Django</h1>
+            </div>
+            <div class="header-right">
+                <a href="#" class="login">
+                    Login
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="main-wrapper">
+        <div class="container">
+            <div class="mainbox">
+
+                    <hr />
+                    {% for blog in blogs %}
+                    <div class="text">
+                      <h3>{{ blog.title }}</h3>
+                      <h3>{{ blog.text | truncatechars:100 }}</h3>
+                      <div style="text-align: right;">
+                          <div class="main-btn">
+                        <a href="{% url 'blogs:detail' blog_id=blog.id %}">詳細はこちら</a>
+                      </div>
+                      </div>
+                    </div>
+                    <hr />
+                    {% endfor %}
+                    </div>
+
+
+<!--
+            <a src="#" class="main-btn">詳細はこちら</a>
+        </div>
+        <h1>Sample</h1>
+        </div>
+-->
+    </div>
+  <!--新規投稿-->
+  <div class="new-toko">
+      <div class="container">
+        <div class="sinki">
+    <a class="fas fa-plus btn2" href="{% url 'blogs:create' %}"></a>
+        </div>
+    </div>
+</div>
+    <!--ログイン-->
+    <div id="login">
+        <div class="modal">
+            <div id="login-close-modal">
+                <i class="fas fa-times"></i>
+            </div>
+            <div id="login-form">
+                <h2>LOGIN</h2>
+                <form action="#">
+                    <input class="form-control" type="text" placeholder="Login ID">
+                    <input class="form-control" type="password" placeholder="password">
+                    <div id="login-btn">LOGIN</div>
+                </form>
+                <h3>--------------------or--------------------</h3>
+                <div id="new">Create New Account</div>
+            </div>
+        </div>
+    </div>
+    <!--ここまで-->
+<!--新規登録-->
+    <div class="logins">
+    <div id="loginpic">
+        <div class="modal">
+            <div id="close-modal">
+                <i class="fas fa-times"></i>
+            </div>
+            <div id="signup-form">
+                <h2>Create New Account</h2>
+                <form action="#">
+                    <input class="form-control" type="text" placeholder="Your Mail">
+                    <input class="form-control" type="password" placeholder="password">
+                    <div id="submit-btn">Submit</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--ここま～で-->
+      <!--Jquery-->
+        <script>$(function() {
+            $('.btn').click(function(){
+                $('#loginpic').fadeIn(1000);
+            });
+            $('#close-modal').click(function(){
+                $('#loginpic').fadeOut();
+            });
+            $('.login').click(function(){
+                $('#login').fadeIn(1000);
+            });
+            $('#login-close-modal').click(function(){
+                $('#login').fadeOut();
+            })
+            $('#new').click(function(){
+                $('#login').fadeOut(1400);
+                $('#loginpic').fadeIn(2000);
+            });
+           //プラスボタン回転
+            $('.sinki').on("mouseover",function(){
+            $('.fa-plus').css({transform: 'rotatez(0deg)'});
+            });
+            $('.sinki').on("mouseout",function(){
+            $('.fa-plus').css({transform: 'rotatez(180deg)'});
+            });
+
+        });
+        </script>
+</body>
+
+</html>
+
+<!--
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ブログ管理サイト</title>
     <link rel="stylesheet" href="static/css/stylesheet.css">
 </head>
 
@@ -70,7 +201,9 @@
 </html>
 
 
-<!--
+
+
+
                     <div class="text">
                         <h1>sample</h1>
                         <h3>sample練習</h3>

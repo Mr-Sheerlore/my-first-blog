@@ -1,3 +1,4 @@
+@charset "utf-8";
 body {
     margin: 0;
     font-family: "Hiragino Kaku Gothic ProN";
@@ -14,65 +15,226 @@ a {
     padding: 0px 15px;
 }
 
-.top-wrapper {
-    background-color: #008b8b;
+header{
+    height: 65px;
+    background-color: rgba(4, 194, 121, 0.781);
     width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    font-family: 'Courgette', cursive;
+}
+header h1{
+    position: absolute;
+    left: 70px;
+    display: block;
+    line-height:6px;
+    font-size: 40px;
+}
+.header-right{
+    float:right;
+    font-size: 25px;
+
+}
+.header-right a{
+    background-color: rgba(4, 168, 31, 0.315);
+    line-height: 65px;
+    display: block;
+    transition: all 1s ease;
+    color: rgb(10, 10, 10)
+}
+.login{
+    position: absolute;
+    right: 70px;
+    padding: 0 20px;
+}
+.header-right a:hover{
+    background-color: rgba(158, 252, 205, 0.377);
+}
+#loginpic{
+    position: fixed;
+    top:0px;
+    right:0px;
+    left:0px;
+    bottom:0px;
+    background-color: rgba(0, 0, 0, 0.616);
+    z-index: 100;
+    display: none;
+}
+.modal{
+    position: absolute;
+    top:210px;
+    left:680px;
+    background-color: #e6ecf0;
+    padding: 20px 0 40px;
+    border-radius: 10px;
+    width: 450px;
+    height: auto;
     text-align: center;
+}
+.fa-times{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: rgba(128, 128, 128, 0.46);
+    cursor: pointer;
+}
+#signup-form h2 {
+    color: #5f5d60;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+#signup-form input{
+    width: 320px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    padding: 12px 12px;
+    border: 1px solid #d0d5d8;
+    border-radius: 5px;
+}
+#submit-btn{
+    display: inline-block;
+    padding:14px 140px;
+    background-color: #5dca88;
+    border: none;
+    border-radius: 3px;
     color: white;
+    margin: 10px auto;
+    cursor: pointer;
+}
+#signup-form {
+    width: 100%;
+}
+
+#login{
+    position: fixed;
+    top:0px;
+    right:0px;
+    left:0px;
+    bottom:0px;
+    background-color: rgba(0, 0, 0, 0.616);
+    z-index: 100;
+    display: none;
+}
+
+#login-form h2 {
+    color: #5f5d60;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+#login-form input{
+    width: 320px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    padding: 12px 12px;
+    border: 1px solid #d0d5d8;
+    border-radius: 5px;
+}
+#login-btn{
+    display: inline-block;
+    padding:14px 140px;
+    background-color: #5dca88;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    margin: 10px auto;
+    cursor: pointer;
+}
+#login-form {
+    width: 100%;
+}
+#new{
+      display: inline-block;
+      color: white;
+      background-color: #5dca88;
+      cursor: pointer;
+      padding:14px 85px;
+      border: none;
+      border-radius: 3px;
+}
+.push-wrapper{
+    width: 100%;
+    height: 505px;
+    background-color: rgba(194, 194, 194, 0.308);
+    position: absolute;
+}
+.mainf{
+    position: relative;
+    top:100px;
+    left:760px;
+    border:5px dashed #5f5d60;
+    background-color: #ffffff;
+    padding: 100px 0;
+    border-radius: 10px;
+    width: 320px;
+    height: auto;
+    text-align: center;
+
+}
+.fa-plus{
+    font-size: 70px;
+    color: rgb(147, 210, 241);
+}
+.main-wrapper{
     position: absolute;
     top: 0px;
-}
-
-.top-wrapper h1 {
-    font-size: 35px;
-    line-height: 75px;
-}
-
-.main-wrapper h1 {
-    color: black;
     width: 100%;
-    font-size: 30px;
-    margin: 10px 0;
-    line-height: 30px;
-}
+    background-color: rgba(230, 228, 228, 0.87);
+    padding: 500px 0;
 
-.main-wrapper h3 {
-    color: black;
-    font-size: 15px;
-    margin: 10px 0;
-    line-height: 30px;
 }
-
-.main-wrapper {
-    float: left;
-    width: 100%;
-    height: 1000px;
-    background-color: rgb(240, 240, 240);
-}
-
-.text {
-    margin: 20px 200px;
-    padding: 15px 50px;
-    text-align: left;
-    background-color: rgba(223, 218, 218, 0.9);
-    box-shadow: 5px 5px 5px rgba(136, 135, 135, 0.5);
+.mainbox{
     position: relative;
+    bottom: 370px;
+    padding: 70px 50px;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    left: 320px;
+    border: 1px solid rgba(27, 27, 27, 0.123);
+    border-radius: 5px;
+    box-shadow:  5px 5px 5px 0px rgba(155, 155, 155, 0.507);
 }
-
-.btn:hover {
+.main-btn{
+    position: relative;
+    top: 10px;
+    float: right;
+    background-color: rgba(151, 150, 150, 0.329);
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: all 1s ease;
+}
+.main-btn:hover{
+    background-color: rgb(201, 201, 201);
     cursor: pointer;
-    background-color: rgb(184, 184, 184);
-    color: rgb(70, 69, 69);
 }
-
-.btn {
-    background-color: rgba(136, 135, 135, 0.295);
-    padding: 10px 7px 10px 7px;
-    display: block;
+.main-wrapper h1{
     position: absolute;
-    right: 55px;
-    bottom: 20px;
-    color: rgb(90, 88, 88);
-    border-radius: 6px;
-    transition: color 1s, background 1s;
+    font-size: 30px;
+    top: 140px;
+    left:600px;
+}
+.new-toko{
+    position: absolute;
+    top:400px;
+    text-align: center;
+    width:100%;
+    padding-bottom: 200px;
+}
+.sinki{
+    background-color: rgb(255, 255, 255);
+    padding: 60px 0;
+    width: 15%;
+    position: relative;
+    left: 600px;
+    border-radius: 10px;
+    border: 4px dashed rgb(0, 0, 0);
+}
+.fa-plus{
+    font-size: 70px;
+    color: rgb(147, 210, 241);
+    transition: 1.0s;
+    transform: rotatez(180deg);
+}
+.sinki:hover{
+    cursor: pointer;
 }
